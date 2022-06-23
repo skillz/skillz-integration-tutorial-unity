@@ -238,5 +238,5 @@ When contributing back to the Driver game, please make sure that the game logic 
 
 ## TODOs
 
-* Make sure the above steps work with Unity on Windows.
-* Create more elaborate guidelines for contribution
+* [ ] Make sure the above steps work with Unity on Windows.
+* [ ] Create more elaborate guidelines for contribution
