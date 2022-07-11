@@ -4,7 +4,7 @@ This folder is meant to test different versions of the Skillz SDK on different v
 
 The recommended way to do this is by doing the following steps:
 
-* Copy any of the games in [game-templates](game-templates) into the [implementations](implementations) folder using the steps in the [Create New Game from Specific Template](#create-new-game-from-specific-template) section.
+* Copy any of the games in [game-templates](game-templates) into the [implementations](implementations) folder using the steps in the [1\. Clone a Game Template](#1-clone-a-game-template) section.
   * The game folders take the naming syntax of **GAME_NAME-UNITY_VERSION** (i.e. Driver-2019.4.35f1).
 * Follow the version specific Skillz SDK integration instructions from [docs.skillz.com](https://docs.skillz.com/docs/installing-skillz-unity).
 * If you are integrating Firebase, follow the instructions in the [Firebase](#firebase) section.
@@ -106,6 +106,7 @@ GAME_NAME="Driver"
 #SDK_VERSION="28.0.11"
 #SDK_VERSION="28.0.17"
 #SDK_VERSION="28.1.4"
+#SDK_VERSION="29.0.16"
 
 # New Game Directory
 GAME_DIRECTORY="${GAME_NAME}-${UNITY_VERSION}-SDK-${SDK_VERSION}"
