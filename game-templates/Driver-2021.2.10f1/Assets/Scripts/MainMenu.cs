@@ -22,6 +22,8 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene(Car.Scene);
+
+        // Uncomment to launch the Skillz UI
         // SkillzCrossPlatform.LaunchSkillz(new SkillzGameController());
     }
 }
