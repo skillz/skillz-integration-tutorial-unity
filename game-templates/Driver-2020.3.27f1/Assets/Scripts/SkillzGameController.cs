@@ -9,17 +9,19 @@ public sealed class SkillzGameController : SkillzMatchDelegate
 
     // Called when a player chooses a tournament and the match countdown expires
     public void OnMatchWillBegin(Match matchInfo) {
-        // This is where you launch into your competitive gameplay
-        SceneManager.LoadScene(GameScene);
+        // Uncomment to launch your game from the Skillz UI
+        //SceneManager.LoadScene(GameScene);
     }
 
     // Called when a player clicks the Progression entry point or side menu. Explained in later steps
     public void OnProgressionRoomEnter() {
-        SceneManager.LoadScene(ProgressionRoomScene);
+        // Uncomment to enable the Skillz Progression scene
+        //SceneManager.LoadScene(ProgressionRoomScene);
     }
 
     // Called when a player chooses Exit Skillz from the side menu
     public void OnSkillzWillExit() {
-        SceneManager.LoadScene(StartMenuScene);
+        // Uncomment to allow players to Exit the Skillz UI
+        //SceneManager.LoadScene(StartMenuScene);
     }
 }*/
