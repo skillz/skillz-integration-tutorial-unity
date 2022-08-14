@@ -48,6 +48,8 @@ public class Progression : MonoBehaviour
         };
 
         Debug.Log("Getting Default Player Data...");
+
+        // Uncomment to get Default Player Data
         //SkillzCrossPlatform.GetProgressionUserData(ProgressionNamespace.DEFAULT_PLAYER_DATA, keys, OnReceivedDefaultPlayerData, OnReceivedDefaultPlayerDataFail);
     }
 
@@ -94,6 +96,8 @@ public class Progression : MonoBehaviour
         };
 
         Debug.Log("Getting Custom Player Data...");
+
+        // Uncomment to get Custom Player Data
         //SkillzCrossPlatform.GetProgressionUserData(ProgressionNamespace.PLAYER_DATA, keys, OnReceivedCustomPlayerData, OnReceivedCustomPlayerDataFail);
     }
 

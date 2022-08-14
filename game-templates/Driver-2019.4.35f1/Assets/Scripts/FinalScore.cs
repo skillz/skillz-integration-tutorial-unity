@@ -64,12 +64,10 @@ public class FinalScore : MonoBehaviour
         TryToSubmitScore(finalScore);
     }
     */
-
-    /*
     //////////////////////////////////////////////////
     // UPDATE SKILLZ PROGRESSION CUSTOM PLAYER DATA //
     //////////////////////////////////////////////////
-
+    /*
     void UpdateCustomPlayerData() {
         // Create Date String
         string newDate = System.DateTime.Now.ToString();
@@ -82,7 +80,8 @@ public class FinalScore : MonoBehaviour
             { Progression.CPDLastPlayed, newDate }
         };
 
-        SkillzCrossPlatform.UpdateProgressionUserData(ProgressionNamespace.PLAYER_DATA, updateDict, OnUpdateCustomPlayerDataSuccess, OnUpdateCustomPlayerDataFail);
+        // Uncomment to update Custom Player Data
+        //SkillzCrossPlatform.UpdateProgressionUserData(ProgressionNamespace.PLAYER_DATA, updateDict, OnUpdateCustomPlayerDataSuccess, OnUpdateCustomPlayerDataFail);
     }
 
     void OnUpdateCustomPlayerDataSuccess()
