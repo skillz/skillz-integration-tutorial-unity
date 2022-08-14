@@ -55,6 +55,9 @@ Let's use [Driver-2019.4.35f1](game-templates/Driver-2019.4.35f1) as an example 
     * [FinalScore.unity](game-templates/Driver-2019.4.35f1/Assets/Scenes/FinalScore.unity)
       * This scene gets called to show the final score after the gameplay has finished.
       * After successful integration, pressing the button in this scene will submit the final score to Skillz.
+    * [Progression.unity](game-templates/Driver-2019.4.35f1/Assets/Scenes/Progression.unity)
+      * This scene is used to show the Skillz Progression Data.
+      * After successful integration, you will see the Skillz Progression data after submitting a match's final score to Skillz.
     * [Track Assets.unity](game-templates/Driver-2019.4.35f1/Assets/Scenes/Track%20Assets.unity)
       * This scene is used to track the assets from the game.
       * Not really relevant to Skillz integration.
@@ -73,6 +76,8 @@ Let's use [Driver-2019.4.35f1](game-templates/Driver-2019.4.35f1) as an example 
       * Used in the `Game` scene to handle the logic that keeps track of the score in-game.
     * [FinalScore.cs](game-templates/Driver-2019.4.35f1/Assets/Scripts/FinalScore.cs)
       * Used in the `FinalScore` scene to handle the logic that shows the final score on the screen and the logic that submits the score to Skillz.
+    * [Progression.cs](game-templates/Driver-2019.4.35f1/Assets/Scripts/Progression.cs)
+      * Used in the `Progresion` scene to handle the logic that shows the Skillz Progression data.
 * [Packages](game-templates/Driver-2019.4.35f1/Packages)
   * This folder has the [manifest.json](game-templates/Driver-2019.4.35f1/Packages/manifest.json) file, which lists the versions of the packages that are specific to the Unity Version.
   * This is perhaps what changes the most across the different Unity versions of the Driver game.
