@@ -28,8 +28,8 @@ public class FinalScore : MonoBehaviour
         Debug.Log("Clicked \"View Results\" Button");
         SceneManager.LoadScene(MainMenu.Scene);
 
-        // Go back to Skillz
-        // TryToSubmitScore(finalScore);
+        // Uncomment to submit score to Skillz
+        //TryToSubmitScore(finalScore);
     }
     /*
     ////////////////////////////
@@ -38,13 +38,19 @@ public class FinalScore : MonoBehaviour
 
     void TryToSubmitScore(int score) {
         Debug.Log("Submitting score to Skillz!");
-        SkillzCrossPlatform.SubmitScore(score, OnSubmitScoreSuccess, OnSubmitScoreFailure);
+
+        // Uncomment to submit score to Skillz
+        //SkillzCrossPlatform.SubmitScore(score, OnSubmitScoreSuccess, OnSubmitScoreFailure);
     }
 
     void OnSubmitScoreSuccess() {
         Debug.Log("Successfully submitted score to Skillz!");
+
+        // Uncomment to Return to the Skillz UI
         //SkillzCrossPlatform.ReturnToSkillz();
-        UpdateCustomPlayerData();
+
+        // Uncomment to enable Skillz Progression
+        //UpdateCustomPlayerData();
     }
 
     void OnSubmitScoreFailure(string reason) {
@@ -57,7 +63,9 @@ public class FinalScore : MonoBehaviour
         yield return new WaitForSeconds(_retryDelayInSeconds);
         TryToSubmitScore(finalScore);
     }
+    */
 
+    /*
     //////////////////////////////////////////////////
     // UPDATE SKILLZ PROGRESSION CUSTOM PLAYER DATA //
     //////////////////////////////////////////////////
