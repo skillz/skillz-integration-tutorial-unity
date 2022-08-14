@@ -42,17 +42,17 @@ In the [game-templates](game-templates) folder, you will find the following vers
 
 Each version of the game has the exact game logic in their respective **Assets/Scripts** directory. The main difference amongst them is the version of Unity (i.e. 2019) and the corresponding package versions.
 
-Let's use [Driver-2019.4.35f1](Driver-2019.4.35f1) as an example to breakdown the folder structure that's relevant for the purposes of testing the Skillz SDK:
+Let's use [Driver-2019.4.35f1](game-templates/Driver-2019.4.35f1) as an example to breakdown the folder structure that's relevant for the purposes of testing the Skillz SDK:
 
 * [Assets](game-templates/Driver-2019.4.35f1/Assets)
   * [Scenes](game-templates/Driver-2019.4.35f1/Assets/Scenes)
-    * [Scene_MainMenu.unity](game-templates/Driver-2019.4.35f1/Assets/Scenes/Scene_MainMenu.unity)
+    * [MainMenu.unity](game-templates/Driver-2019.4.35f1/Assets/Scenes/MainMenu.unity)
       * This is the main menu scene.
       * The scripts in this scene are used to initialize the Skillz and Firebase SDKs.
-    * [Scenegame.unity](game-templates/Driver-2019.4.35f1/Assets/Scenes/Scenegame.unity)
+    * [Game.unity](game-templates/Driver-2019.4.35f1/Assets/Scenes/Game.unity)
       * This is the car gameplay scene.
       * After successful integration, the Skillz SDK will launch this scene.
-    * [Scene_FinalScore.unity](game-templates/Driver-2019.4.35f1/Assets/Scenes/Scene_FinalScore.unity)
+    * [FinalScore.unity](game-templates/Driver-2019.4.35f1/Assets/Scenes/FinalScore.unity)
       * This scene gets called to show the final score after the gameplay has finished.
       * After successful integration, pressing the button in this scene will submit the final score to Skillz.
     * [Track Assets.unity](game-templates/Driver-2019.4.35f1/Assets/Scenes/Track%20Assets.unity)
@@ -60,21 +60,21 @@ Let's use [Driver-2019.4.35f1](Driver-2019.4.35f1) as an example to breakdown th
       * Not really relevant to Skillz integration.
   * [Scripts](game-templates/Driver-2019.4.35f1/Assets/Scripts)
     * [MainMenu.cs](game-templates/Driver-2019.4.35f1/Assets/Scripts/MainMenu.cs)
-      * Used in the `Scene_MainMenu` scene to keep handle the button logic and Skillz Initialization logic.
+      * Used in the `MainMenu` scene to keep handle the button logic and Skillz Initialization logic.
     * [SkillzGameController.cs](game-templates/Driver-2019.4.35f1/Assets/Scripts/SkillzGameController.cs)
-      * Used in the `Scene_MainMenu` scene to handle Skillz delegate logic.
+      * Used in the `MainMenu` scene to handle Skillz delegate logic.
     * [CrashlyticsInit.cs](game-templates/Driver-2019.4.35f1/Assets/Scripts/CrashlyticsInit.cs)
-      * Used in the `Scene_MainMenu` scene to initialize Firebase Crashlytics.
+      * Used in the `MainMenu` scene to initialize Firebase Crashlytics.
     * [CrashlyticsTester.cs](game-templates/Driver-2019.4.35f1/Assets/Scripts/CrashlyticsTester.cs)
-      * Used in the `Scene_MainMenu` scene to send Test Crashes to Firebase Crashlytics.
+      * Used in the `MainMenu` scene to send Test Crashes to Firebase Crashlytics.
     * [Car.cs](game-templates/Driver-2019.4.35f1/Assets/Scripts/Car.cs)
-      * Used in the `Scenegame` scene to handle car movement and crash logic.
+      * Used in the `Game` scene to handle car movement and crash logic.
     * [ScoreSystem.cs](game-templates/Driver-2019.4.35f1/Assets/Scripts/ScoreSystem.cs)
-      * Used in the `Scenegame` scene to handle the logic that keeps track of the score in-game.
+      * Used in the `Game` scene to handle the logic that keeps track of the score in-game.
     * [FinalScore.cs](game-templates/Driver-2019.4.35f1/Assets/Scripts/FinalScore.cs)
-      * Used in the `Scene_FinalScore` scene to handle the logic that shows the final score on the screen and the logic that submits the score to Skillz.
-* [Packages](game-templates/Driver-2019.4.35f1/Driver-2019.4.35f1/Packages)
-  * This folder has the [manifest.json](game-templates/Driver-2021.2.10f1/Packages/manifest.json) file, which lists the versions of the packages that are specific to the Unity Version.
+      * Used in the `FinalScore` scene to handle the logic that shows the final score on the screen and the logic that submits the score to Skillz.
+* [Packages](game-templates/Driver-2019.4.35f1/Packages)
+  * This folder has the [manifest.json](game-templates/Driver-2019.4.35f1/Packages/manifest.json) file, which lists the versions of the packages that are specific to the Unity Version.
   * This is perhaps what changes the most across the different Unity versions of the Driver game.
     * For example, the `com.unity.device-simulator` package is built into Unity 2021, but shows as `3.0.3-preview` in Unity 2020 and 2019.
 
@@ -218,8 +218,8 @@ In order to integrate Firebase Crashlytics into your Unity Project, follow the s
 * Download the Firebase configuration files for iOS and Android into your Project's **Assets** directory.
 * Initialize Firebase and Start sending test crashes to Crashlytics.
   * The code to initialize Firebase ([Step 2](https://firebase.google.com/docs/crashlytics/get-started?platform=unity#initialize-crashlytics)) and send test crashes to Crashlytics ([Step 5](https://firebase.google.com/docs/crashlytics/get-started?platform=unity#force-test-crash)) has already been added to the following files in the **Assets** folder, respectively:
-    * `CrashlyticsInit.cs` which is used by the `CrashlyticsInitializer` GameObject in the `Scene_MainMenu` scene.
-    * `CrashlyticsTester.cs` which is used by the `CrashlyticsTestCrash` GameObject in the `Scene_MainMenu` scene.
+    * `CrashlyticsInit.cs` which is used by the `CrashlyticsInitializer` GameObject in the `MainMenu` scene.
+    * `CrashlyticsTester.cs` which is used by the `CrashlyticsTestCrash` GameObject in the `MainMenu` scene.
 
 Once Firebase Crashlytics has been setup in your Unity Project along with the configuration files, you need to enable the Firebase Crashlytics initialization code by uncommenting lines 6 and 12-30 in the `CrashlyticsInit.cs` file.
 
