@@ -13,8 +13,8 @@ public class Progression : MonoBehaviour
     [SerializeField] private TMP_Text lastPlayedText;
 
     public const string Scene = "Progression";
-
-    /*public void Return()
+    /*
+    public void Return()
     {
         Debug.Log("Clicked \"Return\" Button");
         SkillzCrossPlatform.ReturnToSkillz();
@@ -22,8 +22,11 @@ public class Progression : MonoBehaviour
 
     private void Start()
     {
-        GetSkillzDefaultPlayerData();
-        GetSkillzCustomPlayerData();
+        // Uncomment to get Default Player Data
+        //GetSkillzDefaultPlayerData();
+
+        // Uncomment to get Custom Player Data
+        //GetSkillzCustomPlayerData();
     }
 
     //////////////////////////////////////////
@@ -45,7 +48,7 @@ public class Progression : MonoBehaviour
         };
 
         Debug.Log("Getting Default Player Data...");
-        SkillzCrossPlatform.GetProgressionUserData(ProgressionNamespace.DEFAULT_PLAYER_DATA, keys, OnReceivedDefaultPlayerData, OnReceivedDefaultPlayerDataFail);
+        //SkillzCrossPlatform.GetProgressionUserData(ProgressionNamespace.DEFAULT_PLAYER_DATA, keys, OnReceivedDefaultPlayerData, OnReceivedDefaultPlayerDataFail);
     }
 
     void OnReceivedDefaultPlayerData(Dictionary<string, SkillzSDK.ProgressionValue> data)
@@ -76,11 +79,11 @@ public class Progression : MonoBehaviour
     {
         Debug.Log($"Failed to retrieve Default Player Data: {reason}");
     }
-
+    */
     /////////////////////////////////////////
     // GET SKILLZ CUSTOM PLAYER DATA (CPD) //
     /////////////////////////////////////////
-
+    /*
     public const string CPDLastPlayed = "LastPlayed";
 
     public void GetSkillzCustomPlayerData()
@@ -91,7 +94,7 @@ public class Progression : MonoBehaviour
         };
 
         Debug.Log("Getting Custom Player Data...");
-        SkillzCrossPlatform.GetProgressionUserData(ProgressionNamespace.PLAYER_DATA, keys, OnReceivedCustomPlayerData, OnReceivedCustomPlayerDataFail);
+        //SkillzCrossPlatform.GetProgressionUserData(ProgressionNamespace.PLAYER_DATA, keys, OnReceivedCustomPlayerData, OnReceivedCustomPlayerDataFail);
     }
 
     void OnReceivedCustomPlayerData(Dictionary<string, SkillzSDK.ProgressionValue> data)
