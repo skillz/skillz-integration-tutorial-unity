@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Import Firebase
-// using Firebase;
+//using Firebase;
 
 public class CrashlyticsInit : MonoBehaviour {
     // Use this for initialization
