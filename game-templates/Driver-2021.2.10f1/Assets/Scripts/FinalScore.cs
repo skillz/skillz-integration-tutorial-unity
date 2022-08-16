@@ -31,11 +31,11 @@ public class FinalScore : MonoBehaviour
         // Uncomment to submit score to Skillz
         //TryToSubmitScore(finalScore);
     }
-    /*
+
     ////////////////////////////
     // SUBMIT SCORE TO SKILLZ //
     ////////////////////////////
-
+    /*
     void TryToSubmitScore(int score) {
         Debug.Log("Submitting score to Skillz!");
 
