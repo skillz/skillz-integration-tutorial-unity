@@ -153,15 +153,6 @@ In this section, you will install the Skillz SDK in the Unity project and then g
 * Open [docs.skillz.com](https://docs.skillz.com/docs/installing-skillz-unity) and select the desired SDK version in the top left dropdown.
 * Follow steps 1-4 from the [Install the SDK](https://docs.skillz.com/docs/installing-skillz-unity) guide in your Unity Project.
   * Make sure you add your Game ID in the Skillz Menu in Unity.
-* To enable the Skillz logic, open these files in your Unity Project and perform the following steps:
-  * **Assets/Scripts/MainMenu.cs**
-    * Comment out line 22.
-    * Uncomment line 23.
-  * **Assets/Scripts/FinalScore.cs**
-    * Comment out line 30.
-    * Uncomment lines 25, 32, and 35 to 51
-  * **Assets/Scripts/SkillzGameController.cs**
-    * Uncomment from line 1 to 25.
 * Follow the steps in the [Step 5 - Build and Run](https://docs.skillz.com/docs/installing-skillz-unity#5-build-and-run) section to deploy the Skill-enabled game to your iOS or Android Device.
 
 If successful, you should be able to see the Skillz UI, Launch into a game, and see the final score on the Skillz UI.
@@ -208,35 +199,7 @@ You can also achieve the same result by opening the exported Android Studio proj
 
 ## Integrate the Firebase Crashlytics SDK
 
-A lot of developers use the [Firebase](https://firebase.google.com/) suite of [products](https://firebase.google.com/docs/unity/setup#available-libraries) to simplify the developing, distributing, and monitoring (amongst other activities) of their Unity Games.
-
-One of the most popular Firebase packages is [Firebase Crashlytics](https://firebase.google.com/docs/crashlytics/get-started?platform=unity), which is used to monitor and debug application crashes caused by Game code and other 3rd party SDKs, such as the Skillz SDK. The ability to integrate Firebase Crashlytics into a Skillz-enabled game is crucial to catch problems and fix them quickly.
-
-**NOTE:** At the time of writing, the latest Unity Firebase version supported by the Skillz SDK is [8.6.2](https://dl.google.com/firebase/sdk/unity/firebase_unity_sdk_8.6.2.zip). As long as you stay within the same major Firebase SDK version, you should be able to integrate it into your Skillz Enabled Unity Game without a problem.
-
-In order to integrate Firebase Crashlytics into your Unity Project, follow the steps in the [Get started with Firebase Crashlytics](https://firebase.google.com/docs/crashlytics/get-started?platform=unity) guide to do the following:
-
-* Create a Firebase account.
-* Create a Firebase project.
-* Register your Unity Game apps with Firebase.
-* Download the [Firebase SDK]([8.6.2](https://dl.google.com/firebase/sdk/unity/firebase_unity_sdk_8.6.2.zip)) and install the `FirebaseCrashlytics.unitypackage` package into your Unity Project.
-* Download the Firebase configuration files for iOS and Android into your Project's **Assets** directory.
-* Initialize Firebase and Start sending test crashes to Crashlytics.
-  * The code to initialize Firebase ([Step 2](https://firebase.google.com/docs/crashlytics/get-started?platform=unity#initialize-crashlytics)) and send test crashes to Crashlytics ([Step 5](https://firebase.google.com/docs/crashlytics/get-started?platform=unity#force-test-crash)) has already been added to the following files in the **Assets** folder, respectively:
-    * `CrashlyticsInit.cs` which is used by the `CrashlyticsInitializer` GameObject in the `MainMenu` scene.
-    * `CrashlyticsTester.cs` which is used by the `CrashlyticsTestCrash` GameObject in the `MainMenu` scene.
-
-Once Firebase Crashlytics has been setup in your Unity Project along with the configuration files, you need to enable the Firebase Crashlytics initialization code by uncommenting lines 6 and 12-30 in the `CrashlyticsInit.cs` file.
-
-Now try building and deploying your game to your iOS or Android device and let it run for a few minutes.
-
-Now open your Crashlytics Dashboard in your Firebase project and select your registered app in the top dropdown, as shown below:
-
-<p align="center">
-  <img src="static/1_crash_screenshot.png" />
-</p>
-
-If you can see the `CrashlyticsTester.throwExceptionEvery60Updates` crash as shown above, then you have integrated Firebase Crashlytics successfully!!!
+To integrate Firebase, follow the instructions in the [Firebase](https://docs.skillz.com/docs/installing-skillz-unity#firebase) section of the Skillz documentation.
 
 ## Contributing
 
@@ -245,4 +208,4 @@ When contributing back to the Driver game, please make sure that the game logic 
 ## TODOs
 
 * [ ] Make sure the above steps work with Unity on Windows.
-* [ ] Create more elaborate guidelines for contribution
+* [ ] Create more elaborate guidelines for contribution.
