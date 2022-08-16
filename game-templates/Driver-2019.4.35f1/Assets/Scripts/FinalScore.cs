@@ -55,7 +55,12 @@ public class FinalScore : MonoBehaviour
 
     void OnSubmitScoreFailure(string reason) {
         Debug.Log($"Fail to submit score to Skillz: {reason}");
-        StartCoroutine(RetrySubmitScore());
+
+        // Uncomment to enable Fallback Score Reporting
+        //SkillzCrossPlatform.DisplayTournamentResultsWithScore(finalScore);
+
+        // Uncomment to retry submitting the score
+        //StartCoroutine(RetrySubmitScore());
     }
 
     IEnumerator RetrySubmitScore() {
