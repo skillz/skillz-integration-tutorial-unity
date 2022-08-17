@@ -204,8 +204,3 @@ To integrate Firebase, follow the instructions in the [Firebase](https://docs.sk
 ## Contributing
 
 When contributing back to the Driver game, please make sure that the game logic is exactly the same on all versions of the Driver game in the [game-templates](game-templates) folder. That way, when cloning a project, the user can just focus on Skillz SDK integration.
-
-## TODOs
-
-* [ ] Make sure the above steps work with Unity on Windows.
-* [ ] Create more elaborate guidelines for contribution.
